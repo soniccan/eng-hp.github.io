@@ -1,0 +1,72 @@
+$max-width: 800px;
+
+
+.mainvisual{
+    background-color: rgb(20, 18, 18);
+    color: white;
+
+    display: flex;
+    align-items: flex-start;
+
+
+
+    @media screen and (max-width: $max-width){
+        flex-direction: column;
+    }
+
+    .typography{
+
+        flex: 1;
+        width: 420px;
+        margin: auto auto;
+        text-align: center;
+        @media screen and (max-width: $max-width){
+            margin:50px auto;
+        }
+    }
+    .img{
+        flex: 1;
+        width: 50%;
+        @media screen and (max-width: $max-width){
+            width: 100%;
+        }
+    }
+ }
+
+
+ .career{
+
+    justify-content: center;
+    font-weight: bold;
+    .exp{
+
+        margin: 0px auto;
+
+        .year
+        {
+
+        }
+    }
+ }
+ .works{
+    margin-top: 50px;
+    margin: 0px auto;
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        .card
+        {
+            width: 30%;
+            margin : 25px 20px;
+            @media screen and (max-width: $max-width){
+                width: 100%;
+            }
+        }
+
+    }
+
+ }
