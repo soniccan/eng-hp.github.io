@@ -17,13 +17,13 @@ export const Header = (): JSX.Element => {
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', sm: 'block', } }} >
 
-                        <Button href="/" key="home" sx={{ color: '#000' }}>
+                        <Button href="/eng-hp.github.io/" sx={{ color: '#000' }}>
                             HOME
                         </Button>
-                        <Button href="/about" key="home" sx={{ color: '#000' }}>
+                        <Button href="/eng-hp.github.io/about" sx={{ color: '#000' }}>
                             About
                         </Button>
-                        <Button href="/works" key="home" sx={{ color: '#000' }}>
+                        <Button href="/eng-hp.github.io/works" sx={{ color: '#000' }}>
                             Works
                         </Button>
 
