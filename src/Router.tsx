@@ -9,11 +9,11 @@ import { About } from "./pages/about/About";
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/eng-hp.github.io/" element={<Layout />} >
+      <Route path="/" element={<Layout />} >
         <Route index element={< Home/>} />
 
-        <Route path="/eng-hp.github.io/works" element={<Works />} />
-        <Route path="/eng-hp.github.io/about" element={<About />} />
+        <Route path="works" element={<Works />} />
+        <Route path="about" element={<About />} />
         <Route path="*" element={<Page404 />} />
       </Route>
 
