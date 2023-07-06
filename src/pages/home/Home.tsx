@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import classes from './Home.module.scss';
 import mainvisual from './images/mainvisual.jpg';
+
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 export const Home = () => (
   <>
@@ -22,8 +23,8 @@ export const Home = () => (
         <table className={classes.exp}>
             <CareerComponent year='2018/04〜' text='筑波大学情報学群情報科学類入学' />
             <CareerComponent year='2020/04〜' text='株式会社CA Tech Kids School メンター' />
-            <CareerComponent year='2020/08　' text='セキュリティ・キャンプ全国大会 参加' />
-            <CareerComponent year='2021/04〜2023/03　' text='株式会社CA Tech Kids School HP改修業務' />
+            <CareerComponent year='2020/08' text='セキュリティ・キャンプ全国大会 参加' />
+            <CareerComponent year='2021/04〜2023/03' text='株式会社CA Tech Kids School HP改修業務' />
             <CareerComponent year='2022/04〜' text='筑波大学並列分散処理研究室 配属' />
         </table>
     </div>
@@ -34,9 +35,9 @@ export const Home = () => (
             Works
         </Typography>
         <div className={classes.cards}>
-            <WorkComponent imgPath="https://www.astina.co/wp-content/uploads/2022/08/WEB%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84-%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3-768x432-1.png" text='HPデイリー更新作業の自動化' />
-            <WorkComponent imgPath='./img/points.png' text='身体座標データ取得アプリの作成' />
-            <WorkComponent imgPath='./img/graph.png' text='運動成功要因の探索手法の開発' />
+            <WorkComponent imgPath="/eng-hp.github.io/img/gas.png" text='HPデイリー更新作業の自動化' />
+            <WorkComponent imgPath='/eng-hp.github.io/img/points.png' text='身体座標データ取得アプリの作成' />
+            <WorkComponent imgPath='/eng-hp.github.io/img/graph.png' text='運動成功要因の探索手法の開発' />
         </div>
    </div>
   </>
@@ -59,7 +60,7 @@ const CareerComponent = (props:CareerProps) => {
           <td className={classes.year}>{props.year}</td>
           <td className={classes.text}>{props.text}</td>
         </tr>
-        
+
     )
 }
 
@@ -71,22 +72,19 @@ type WorkProps = {
 const WorkComponent = (props:WorkProps) => {
     return (
         <Card className={classes.card} sx={{ maxWidth: 345 }}>
-            <CardActionArea href="/works">
+            <CardActionArea component={Link} to="/works">
                 <CardMedia
                     component="img"
                     alt=""
                     height="140"
-                    image={props.imgPath}
+                    src={props.imgPath}
                 />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {props.text}
                     </Typography>
-
                 </CardContent>
-
             </CardActionArea>
-
         </Card>
     )
 }
