@@ -1,6 +1,7 @@
-import { AppBar, Box, Button, Toolbar, Typography} from "@mui/material";
+import { AppBar, Box, Button, IconButton, Toolbar, Typography} from "@mui/material";
 import classes from  './Layout.module.scss';
 import { Link } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const Header = (): JSX.Element => {
     return (
@@ -14,7 +15,7 @@ export const Header = (): JSX.Element => {
                         Shunsuke Baba
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Box sx={{ display: { xs: 'none', sm: 'block', } }} >
+
                         <Button component={Link} to="/" sx={{ color: '#000' }}>
                             HOME
                         </Button>
@@ -24,7 +25,6 @@ export const Header = (): JSX.Element => {
                         <Button component={Link} to="/works" sx={{ color: '#000' }}>
                             Works
                         </Button>
-                    </Box>
                 </Toolbar>
             </AppBar>
         </div>
